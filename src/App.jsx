@@ -1,15 +1,8 @@
-// import './App.css'
-import SideBar from './component/side-bar'
-import AppRoutes from './routes'
+import AppRoutes from "./routes";
+import "font-awesome/css/font-awesome.css";
 
 function App() {
-
-  return (
-    <>
-      <AppRoutes />
-      {/* <SideBar /> */}
-    </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
