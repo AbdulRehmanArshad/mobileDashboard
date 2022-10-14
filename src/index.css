@@ -63,7 +63,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Open Sans;
+  font-family: Comfortaa;
   /* 4 */
 }
 
@@ -144,7 +144,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: Comfortaa;
+
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -635,7 +636,7 @@ p {
 }
 
 small {
-  font-size: .875em;
+  font-size: .500em;
 }
 
 svg {
@@ -660,11 +661,11 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.25;
 }
 
@@ -2447,7 +2448,7 @@ h6 {
 }
 
 .font-sans {
-  font-family: Open Sans;
+  font-family: Comfortaa;
 }
 
 .text-base {
@@ -3038,7 +3039,7 @@ h6 {
 
 .before\:font-awesome::before {
   content: var(--tw-content);
-  font-family: FontAwesome;
+  font-family: Comfortaa;
 }
 
 .before\:text-5\.5::before {
@@ -3310,7 +3311,7 @@ h6 {
 
 .after\:font-awesome::after {
   content: var(--tw-content);
-  font-family: FontAwesome;
+  font-family: Comfortaa;
 }
 
 .after\:text-xxs::after {

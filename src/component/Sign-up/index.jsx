@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const SignUp = () => {
@@ -9,12 +9,12 @@ const SignUp = () => {
           <div className="container flex items-center justify-between py-0 flex-wrap-inherit">
             <div className="items-center flex-grow transition-all ease-soft duration-350 lg-max:bg-white lg-max:max-h-0 lg-max:overflow-hidden basis-full rounded-xl lg:flex lg:basis-auto">
               <li className="flex items-center">
-                <a
+                <Link
                   className="leading-pro ease-soft-in border-white/75 text-xs tracking-tight-soft rounded-3.5xl hover:border-white/75 hover:scale-102 active:hover:border-white/75 active:hover:scale-102 active:opacity-85 active:shadow-soft-xs active:border-white/75 bg-white/10 hover:bg-white/10 active:hover:bg-white/10 mr-2 mb-0 inline-block cursor-pointer border border-solid py-2 px-8 text-center align-middle font-bold uppercase text-white shadow-none transition-all hover:text-white hover:opacity-75 hover:shadow-none active:scale-100 active:bg-white active:text-black active:hover:text-white active:hover:opacity-75 active:hover:shadow-none"
                   href="./"
                 >
                   Dashboard
-                </a>
+                </Link>
               </li>
             </div>
           </div>
@@ -44,7 +44,7 @@ const SignUp = () => {
                     </div>
                     <div className="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
                       <div className="w-3/12 max-w-full px-1 ml-auto flex-0">
-                        <a
+                        <Link
                           className="inline-block w-full px-6 py-3 mb-4 font-bold text-center text-gray-200 uppercase align-middle transition-all bg-transparent border border-gray-200 border-solid rounded-lg shadow-none cursor-pointer hover:scale-102 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:bg-transparent hover:opacity-75"
                           href=""
                         >
@@ -79,10 +79,10 @@ const SignUp = () => {
                               </g>
                             </g>
                           </svg>
-                        </a>
+                        </Link>
                       </div>
                       <div className="w-3/12 max-w-full px-1 flex-0">
-                        <a
+                        <Link
                           className="inline-block w-full px-6 py-3 mb-4 font-bold text-center text-gray-200 uppercase align-middle transition-all bg-transparent border border-gray-200 border-solid rounded-lg shadow-none cursor-pointer hover:scale-102 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:bg-transparent hover:opacity-75"
                           href=""
                         >
@@ -109,10 +109,10 @@ const SignUp = () => {
                               </g>
                             </g>
                           </svg>
-                        </a>
+                        </Link>
                       </div>
                       <div className="w-3/12 max-w-full px-1 mr-auto flex-0">
-                        <a
+                        <Link
                           className="inline-block w-full px-6 py-3 mb-4 font-bold text-center text-gray-200 uppercase align-middle transition-all bg-transparent border border-gray-200 border-solid rounded-lg shadow-none cursor-pointer hover:scale-102 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:bg-transparent hover:opacity-75"
                           href=""
                         >
@@ -153,7 +153,7 @@ const SignUp = () => {
                               </g>
                             </g>
                           </svg>
-                        </a>
+                        </Link>
                       </div>
                       <div className="relative w-full max-w-full px-3 mt-2 text-center shrink-0">
                         <p className="z-20 inline px-4 mb-2 font-semibold leading-normal bg-white text-sm text-slate-400">
@@ -203,9 +203,9 @@ const SignUp = () => {
                           >
                             {" "}
                             I agree the{" "}
-                            <a href="" className="font-bold text-slate-700">
+                            <Link href="" className="font-bold text-slate-700">
                               Terms and Conditions
-                            </a>{" "}
+                            </Link>{" "}
                           </label>
                         </div>
                         <div className="text-center">
@@ -218,12 +218,12 @@ const SignUp = () => {
                         </div>
                         <p className="mt-4 mb-0 leading-normal text-sm">
                           Already have an account?{" "}
-                          <a
+                          <Link
                             href="./signIn"
                             className="font-bold text-slate-700"
                           >
                             Sign in
-                          </a>
+                          </Link>
                         </p>
                       </form>
                     </div>
@@ -236,71 +236,71 @@ const SignUp = () => {
             <div className="container">
               <div className="flex flex-wrap -mx-3">
                 <div className="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
-                  <a
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     Company{" "}
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     About Us{" "}
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     Team{" "}
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     Products{" "}
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     Blog{" "}
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href=""
                     target="_blank"
                     className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
                   >
                     {" "}
                     Pricing{" "}
-                  </a>
+                  </Link>
                 </div>
                 <div className="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
-                  <a href="" target="_blank" className="mr-6 text-slate-400">
+                  <Link href="" target="_blank" className="mr-6 text-slate-400">
                     <span className="text-lg fab fa-dribbble"></span>
-                  </a>
-                  <a href="" target="_blank" className="mr-6 text-slate-400">
+                  </Link>
+                  <Link href="" target="_blank" className="mr-6 text-slate-400">
                     <span className="text-lg fab fa-twitter"></span>
-                  </a>
-                  <a href="" target="_blank" className="mr-6 text-slate-400">
+                  </Link>
+                  <Link href="" target="_blank" className="mr-6 text-slate-400">
                     <span className="text-lg fab fa-instagram"></span>
-                  </a>
-                  <a href="" target="_blank" className="mr-6 text-slate-400">
+                  </Link>
+                  <Link href="" target="_blank" className="mr-6 text-slate-400">
                     <span className="text-lg fab fa-pinterest"></span>
-                  </a>
-                  <a href="" target="_blank" className="mr-6 text-slate-400">
+                  </Link>
+                  <Link href="" target="_blank" className="mr-6 text-slate-400">
                     <span className="text-lg fab fa-github"></span>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3">

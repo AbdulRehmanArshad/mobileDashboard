@@ -1,4 +1,3 @@
-import React from "react";
 import SaleOverView from "../sale-overview";
 
 const ActiveUsers = () => {
@@ -62,7 +61,7 @@ const ActiveUsers = () => {
                       Users
                     </p>
                   </div>
-                  <h4 className="font-bold">36K</h4>
+                  <h4 className="font-bold text-sm">36K</h4>
                   <div className="text-xs h-0.75 flex w-3/4 overflow-visible rounded-lg bg-gray-200">
                     <div
                       className="duration-600 ease-soft -mt-0.38 -ml-px flex h-1.5 w-3/5 flex-col justify-center overflow-hidden whitespace-nowrap rounded-lg bg-slate-700 text-center text-white transition-all"
@@ -126,7 +125,7 @@ const ActiveUsers = () => {
                       Clicks
                     </p>
                   </div>
-                  <h4 className="font-bold">2m</h4>
+                  <h4 className="font-bold text-sm">2m</h4>
                   <div className="text-xs h-0.75 flex w-3/4 overflow-visible rounded-lg bg-gray-200">
                     <div
                       className="duration-600 ease-soft -mt-0.38 w-9/10 -ml-px flex h-1.5 flex-col justify-center overflow-hidden whitespace-nowrap rounded-lg bg-slate-700 text-center text-white transition-all"
@@ -181,7 +180,7 @@ const ActiveUsers = () => {
                       Sales
                     </p>
                   </div>
-                  <h4 className="font-bold">435$</h4>
+                  <h4 className="font-bold text-sm">435$</h4>
                   <div className="text-xs h-0.75 flex w-3/4 overflow-visible rounded-lg bg-gray-200">
                     <div
                       className="duration-600 ease-soft -mt-0.38 w-3/10 -ml-px flex h-1.5 flex-col justify-center overflow-hidden whitespace-nowrap rounded-lg bg-slate-700 text-center text-white transition-all"
@@ -241,7 +240,7 @@ const ActiveUsers = () => {
                       Items
                     </p>
                   </div>
-                  <h4 className="font-bold">43</h4>
+                  <h4 className="font-bold text-sm">43</h4>
                   <div className="text-xs h-0.75 flex w-3/4 overflow-visible rounded-lg bg-gray-200">
                     <div
                       className="duration-600 ease-soft -mt-0.38 -ml-px flex h-1.5 w-1/2 flex-col justify-center overflow-hidden whitespace-nowrap rounded-lg bg-slate-700 text-center text-white transition-all"
