@@ -1,8 +1,8 @@
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
-import { SignUpSchema } from "./schema";
+import { SignUpSchema } from "./sign-up-schema";
 import "./style.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const initialValue = {
@@ -20,8 +20,6 @@ const SignUp = () => {
     });
   return (
     <div className="m-0 font-sans antialiased font-normal bg-white text-start text-base leading-default text-slate-500">
-      <ToastContainer />
-
       <nav className="absolute top-0 z-30 flex flex-wrap items-center justify-between w-full px-4 py-2 mt-6 mb-4 shadow-none lg:flex-nowrap lg:justify-start">
         <div className="container flex items-center justify-between py-0 flex-wrap-inherit">
           <div className="items-center flex-grow transition-all ease-soft duration-350 lg-max:bg-white lg-max:max-h-0 lg-max:overflow-hidden basis-full rounded-xl lg:flex lg:basis-auto">
@@ -37,30 +35,20 @@ const SignUp = () => {
         </div>
       </nav>
       <main className="mt-0 transition-all duration-200 ease-soft-in-out">
-        <section className="min-h-screen mb-32">
+        <section className="">
           <div className="setImageBackground relative flex items-start pt-12 pb-56 m-4 overflow-hidden bg-center bg-cover min-h-50-screen rounded-xl">
             <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-60"></span>
-            <div className="container z-10">
-              <div className="flex flex-wrap justify-center -mx-3">
-                <div className="w-full max-w-full px-3 mx-auto mt-0 text-center lg:flex-0 shrink-0 lg:w-5/12">
-                  <h1 className="mt-12 mb-2 text-white">Welcome!</h1>
-                  <p className="text-white">
-                    Use these awesome forms to login or create new account in
-                    your project for free.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <div className="container z-10"></div>
           </div>
           <div className="container">
-            <div className="flex flex-wrap -mx-3 -mt-48 md:-mt-56 lg:-mt-48">
+            <div className="flex flex-wrap -mx-3 -mt-72 md:-mt-72 lg:-mt-72">
               <div className="w-full max-w-full px-3 mx-auto mt-0 md:flex-0 shrink-0 md:w-7/12 lg:w-5/12 xl:w-4/12">
                 <div className="relative z-0 flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-                  <div className="p-6 mb-0 text-center bg-white border-b-0 rounded-t-2xl">
+                  <div className="p-3 mb-0 text-center bg-white border-b-0 rounded-t-2xl">
                     <h5>Register with</h5>
                   </div>
                   <div className="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
-                    <div className="w-3/12 max-w-full px-1 ml-auto flex-0">
+                    <div className="w-3/12   max-w-full px-1 ml-auto flex-0">
                       <Link
                         className="inline-block w-full px-6 py-3 mb-4 font-bold text-center text-gray-200 uppercase align-middle transition-all bg-transparent border border-gray-200 border-solid rounded-lg shadow-none cursor-pointer hover:scale-102 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:bg-transparent hover:opacity-75"
                         href=""
@@ -172,15 +160,15 @@ const SignUp = () => {
                         </svg>
                       </Link>
                     </div>
-                    <div className="relative w-full max-w-full px-3 mt-2 text-center shrink-0">
+                    <div className="relative w-full max-w-full px-3  text-center shrink-0">
                       <p className="z-20 inline px-4 mb-2 font-semibold leading-normal bg-white text-sm text-slate-400">
                         or
                       </p>
                     </div>
                   </div>
-                  <div className="flex-auto p-6">
+                  <div className="flex-auto p-3">
                     <form onSubmit={handleSubmit} role="form text-left">
-                      <div className="mb-4">
+                      <div className="mb-3">
                         <input
                           className="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                           placeholder="Name"
@@ -197,13 +185,13 @@ const SignUp = () => {
                         {errors.firstName && touched.firstName ? (
                           <p
                             style={{ color: "red" }}
-                            className="form-error text-xs mt-1"
+                            className="form-error text-xs "
                           >
                             {errors.firstName}
                           </p>
                         ) : null}
                       </div>
-                      <div className="mb-4">
+                      <div className="mb-3">
                         <input
                           className="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                           placeholder="Email"
@@ -220,13 +208,13 @@ const SignUp = () => {
                         {errors.email && touched.email ? (
                           <p
                             style={{ color: "red" }}
-                            className="form-error text-xs mt-1"
+                            className="form-error text-xs "
                           >
                             {errors.email}
                           </p>
                         ) : null}
                       </div>
-                      <div className="mb-4">
+                      <div className="mb-0.5">
                         <input
                           className="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow"
                           placeholder="Password"
@@ -243,13 +231,13 @@ const SignUp = () => {
                         {errors.password && touched.password ? (
                           <p
                             style={{ color: "red" }}
-                            className="form-error text-xs mt-1"
+                            className="form-error text-xs "
                           >
                             {errors.password}
                           </p>
                         ) : null}
                       </div>
-                      <div className="min-h-6 pl-6.92 mb-0.5 block">
+                      <div className="min-h-6 pl-6.92  block">
                         <input
                           id="terms"
                           className="w-4.92 h-4.92 ease-soft -ml-6.92 rounded-1.4 checked:bg-gradient-to-tl checked:from-gray-900 checked:to-slate-800 after:text-xxs after:font-awesome after:duration-250 after:ease-soft-in-out duration-250 relative float-left mt-1 cursor-pointer appearance-none border border-solid border-slate-200 bg-white bg-contain bg-center bg-no-repeat align-top transition-all after:absolute after:flex after:h-full after:w-full after:items-center after:justify-center after:text-white after:opacity-0 after:transition-all after:content-['\f00c'] checked:border-0 checked:border-transparent checked:bg-transparent checked:after:opacity-100"
@@ -257,7 +245,7 @@ const SignUp = () => {
                           value=""
                         />
                         <label
-                          className="mb-2 ml-1 font-normal cursor-pointer select-none text-sm text-slate-700"
+                          className=" ml-1 font-normal cursor-pointer select-none text-sm text-slate-700"
                           htmlFor="terms"
                         >
                           {" "}
@@ -291,88 +279,6 @@ const SignUp = () => {
             </div>
           </div>
         </section>
-        <footer className="py-12">
-          <div className="container">
-            <div className="flex flex-wrap -mx-3">
-              <div className="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  Company{" "}
-                </Link>
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  About Us{" "}
-                </Link>
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  Team{" "}
-                </Link>
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  Products{" "}
-                </Link>
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  Blog{" "}
-                </Link>
-                <Link
-                  href=""
-                  target="_blank"
-                  className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-                >
-                  {" "}
-                  Pricing{" "}
-                </Link>
-              </div>
-              <div className="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
-                <Link href="" target="_blank" className="mr-6 text-slate-400">
-                  <span className="text-lg fab fa-dribbble"></span>
-                </Link>
-                <Link href="" target="_blank" className="mr-6 text-slate-400">
-                  <span className="text-lg fab fa-twitter"></span>
-                </Link>
-                <Link href="" target="_blank" className="mr-6 text-slate-400">
-                  <span className="text-lg fab fa-instagram"></span>
-                </Link>
-                <Link href="" target="_blank" className="mr-6 text-slate-400">
-                  <span className="text-lg fab fa-pinterest"></span>
-                </Link>
-                <Link href="" target="_blank" className="mr-6 text-slate-400">
-                  <span className="text-lg fab fa-github"></span>
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-wrap -mx-3">
-              <div className="w-8/12 max-w-full px-3 mx-auto mt-1 text-center flex-0">
-                <p className="mb-0 text-slate-400">
-                  Copyright ©
-                  <script>document.write(new Date().getFullYear());</script>
-                  Soft by Creative Tim.
-                </p>
-              </div>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );

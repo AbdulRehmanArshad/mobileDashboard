@@ -3,8 +3,8 @@ import bg from "../../assets/img/curved-images/curved6.jpg";
 import { memoryStrings, routes, sls } from "../../utils";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
-import { SignInSchema } from "./schema";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { SignInSchema } from "./sign-in-schema.js";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -28,14 +28,13 @@ const SignIn = () => {
     });
   return (
     <div className="m-0 font-sans antialiased font-normal bg-white text-start text-base leading-default text-slate-500">
-      <ToastContainer />
       <main className="mt-0 transition-all duration-200 ease-soft-in-out">
         <section>
           <div className="relative flex items-center p-0 overflow-hidden bg-center bg-cover min-h-75-screen">
             <div className="container z-10">
               <div className="flex flex-wrap mt-0 -mx-3">
                 <div className="flex flex-col w-full max-w-full px-3 mx-auto md:flex-0 shrink-0 md:w-6/12 lg:w-5/12 xl:w-4/12">
-                  <div className="relative flex flex-col min-w-0 mt-32 break-words bg-transparent border-0 shadow-none rounded-2xl bg-clip-border">
+                  <div className="relative flex flex-col min-w-0 mt-15 break-words bg-transparent border-0 shadow-none rounded-2xl bg-clip-border">
                     <div className="p-6 pb-0 mb-0 bg-transparent border-b-0 rounded-t-2xl">
                       <h3 className="relative z-10 font-bold text-transparent bg-gradient-to-tl from-blue-600 to-cyan-400 bg-clip-text">
                         Welcome back
@@ -136,7 +135,7 @@ const SignIn = () => {
                 </div>
                 <div className="w-full max-w-full px-3 lg:flex-0 shrink-0 md:w-6/12">
                   <div className="absolute top-0 hidden w-3/5 h-full -mr-32 overflow-hidden -skew-x-10 -right-40 rounded-bl-xl md:block">
-                    <div className="absolute inset-x-0 top-0 z-0 h-full -ml-16 bg-cover skew-x-10">
+                    <div className="absolute inset-x-0 top-0 z-0 h-96 -ml-16 bg-cover skew-x-10">
                       <img src={bg} alt="bg" />
                     </div>
                   </div>
@@ -146,88 +145,6 @@ const SignIn = () => {
           </div>
         </section>
       </main>
-      <footer className="py-12">
-        <div className="container">
-          <div className="flex flex-wrap -mx-3">
-            <div className="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                Company{" "}
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                About Us{" "}
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                Team{" "}
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                Products{" "}
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                Blog{" "}
-              </Link>
-              <Link
-                href=""
-                target="_blank"
-                className="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"
-              >
-                {" "}
-                Pricing{" "}
-              </Link>
-            </div>
-            <div className="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
-              <Link href="" target="_blank" className="mr-6 text-slate-400">
-                <span className="text-lg fab fa-dribbble"></span>
-              </Link>
-              <Link href="" target="_blank" className="mr-6 text-slate-400">
-                <span className="text-lg fab fa-twitter"></span>
-              </Link>
-              <Link href="" target="_blank" className="mr-6 text-slate-400">
-                <span className="text-lg fab fa-instagram"></span>
-              </Link>
-              <Link href="" target="_blank" className="mr-6 text-slate-400">
-                <span className="text-lg fab fa-pinterest"></span>
-              </Link>
-              <Link href="" target="_blank" className="mr-6 text-slate-400">
-                <span className="text-lg fab fa-github"></span>
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-wrap -mx-3">
-            <div className="w-8/12 max-w-full px-3 mx-auto mt-1 text-center flex-0">
-              <p className="mb-0 text-slate-400">
-                Copyright ©
-                <script>document.write(new Date().getFullYear());</script>
-                Soft by Creative Tim.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

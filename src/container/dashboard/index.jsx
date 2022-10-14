@@ -12,7 +12,7 @@ const Dashboard = () => {
         <main className="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200">
           <div className="w-full  mx-auto">
             <TodayDetail />
-            <div className="flex flex-wrap mt-2-mx-3">
+            <div className="flex flex-wrap mt-2-mx-3 ">
               <Content />
               <ActiveUsers />
             </div>
