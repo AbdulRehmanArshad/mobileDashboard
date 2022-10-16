@@ -1,33 +1,43 @@
 import { useFormik } from "formik";
-import { Link } from "react-router-dom";
-import { SignUpSchema } from "./schema";
-import "./style.css";
-import { ToastContainer, toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom";
+import { validationSchema } from "./validation.schema";
+import { toast } from "react-toastify";
+import { routes } from "../../utils";
+import { register } from "../../services/http-services/auth";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const initialValue = {
-    firstName: "",
+    userName: "",
     email: "",
     password: "",
   };
   const { handleSubmit, values, errors, touched, handleBlur, handleChange } = useFormik({
     initialValues: initialValue,
-    validationSchema: SignUpSchema,
+    validationSchema: validationSchema,
     onSubmit: (values) => {
-      toast.success("Register Successfully");
+      register({
+        values,
+        cbSuccess: (data) => {
+          toast.success(data.message);
+          // sls.encode(memoryStrings.authorization, data.token);
+          navigate(routes.login);
+        },
+        cbFailure: (error) => {
+          toast.error(error);
+        },
+      });
     },
   });
   return (
     <div className='m-0 font-sans antialiased font-normal bg-white text-start text-base leading-default text-slate-500'>
-      <ToastContainer />
-
       <nav className='absolute top-0 z-30 flex flex-wrap items-center justify-between w-full px-4 py-2 mt-6 mb-4 shadow-none lg:flex-nowrap lg:justify-start'>
         <div className='container flex items-center justify-between py-0 flex-wrap-inherit'>
           <div className='items-center flex-grow transition-all ease-soft duration-350 lg-max:bg-white lg-max:max-h-0 lg-max:overflow-hidden basis-full rounded-xl lg:flex lg:basis-auto'>
             <li className='flex items-center'>
               <Link
                 className='leading-pro ease-soft-in border-white/75 text-xs tracking-tight-soft rounded-3.5xl hover:border-white/75 hover:scale-102 active:hover:border-white/75 active:hover:scale-102 active:opacity-85 active:shadow-soft-xs active:border-white/75 bg-white/10 hover:bg-white/10 active:hover:bg-white/10 mr-2 mb-0 inline-block cursor-pointer border border-solid py-2 px-8 text-center align-middle font-bold uppercase text-white shadow-none transition-all hover:text-white hover:opacity-75 hover:shadow-none active:scale-100 active:bg-white active:text-black active:hover:text-white active:hover:opacity-75 active:hover:shadow-none'
-                href='/'
+                to='/'
               >
                 Dashboard
               </Link>
@@ -155,16 +165,16 @@ const SignUp = () => {
                           aria-label='Name'
                           aria-describedby='email-addon'
                           autoComplete='off'
-                          type='firstName'
-                          id='firstName'
-                          name='firstName'
-                          value={values.firstName}
+                          type='text'
+                          id='userName'
+                          name='userName'
+                          value={values.userName}
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
-                        {errors.firstName && touched.firstName ? (
+                        {errors.userName && touched.userName ? (
                           <p style={{ color: "red" }} className='form-error text-xs mt-1'>
-                            {errors.firstName}
+                            {errors.userName}
                           </p>
                         ) : null}
                       </div>
@@ -219,7 +229,6 @@ const SignUp = () => {
                           className='mb-2 ml-1 font-normal cursor-pointer select-none text-sm text-slate-700'
                           htmlFor='terms'
                         >
-                          {" "}
                           I agree the{" "}
                           <Link href='' className='font-bold text-slate-700'>
                             Terms and Conditions
@@ -236,7 +245,7 @@ const SignUp = () => {
                       </div>
                       <p className='mt-4 mb-0 leading-normal text-sm'>
                         Already have an account? Login{" "}
-                        <Link href='./signIn' className='font-bold text-slate-700 hover:cursor-pointer'>
+                        <Link to={routes.login} className='font-bold text-slate-700 hover:cursor-pointer'>
                           here
                         </Link>
                       </p>
